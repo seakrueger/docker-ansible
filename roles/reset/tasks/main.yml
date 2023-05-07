@@ -1,0 +1,28 @@
+---
+- name: Purge Docker packages
+  apt:
+    pkg:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+      - docker-ce-rootless-extras
+    state: absent
+    purge: true
+    update_cache: true
+
+- name: Remove /var/lib/docker
+  file:
+    path: /var/lib/docker
+    state: absent
+
+- name: Remove /var/lib/containerd
+  file:
+    path: /var/lib/containerd
+    state: absent
+
+- name: Remove docker group
+  group:
+    name: docker
+    state: absent
