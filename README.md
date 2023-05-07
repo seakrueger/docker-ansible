@@ -1,10 +1,10 @@
-# Install the Docker Engine on Ubuntu via Ansible
+# Install Docker Engine on Ubuntu via Ansible
 
 ## System requirements
 
-[x] Ubuntu 18.04+
-[x] Ansible 2.4.0+
-[x] passwordless SSH access
+- Ubuntu 18.04+
+- Ansible 2.4.0+
+- passwordless SSH access
 
 ## Usage
 
